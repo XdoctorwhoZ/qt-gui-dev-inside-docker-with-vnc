@@ -1,2 +1,6 @@
-# qt-gui-dev-inside-docker-with-vnc
-Example project to show how to dev Qt Gui inside a docker container using vnc
+# Code ta GUI Qt dans un container docker avec VNC
+
+## WATCHME : Parce que je préfére parler plutot qu'écrire
+
+[![Alt text](https://img.youtube.com/vi/zusmB3ct3xc/0.jpg)](https://www.youtube.com/watch?v=zusmB3ct3xc)
+

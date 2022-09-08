@@ -1,0 +1,33 @@
+cmake_minimum_required(VERSION 3.14)
+
+project(${PROG} LANGUAGES CXX)
+
+set(PROG example-app)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Core REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Core REQUIRED)
+find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+
+set(SOURCE_FOLDER ${CMAKE_CURRENT_SOURCE_DIR})
+
+set(SOURCE_FILES
+	${SOURCE_FOLDER}/main.cpp
+)
+
+add_executable(${PROG}
+	${SOURCE_FILES}
+)
+
+target_link_libraries(${PROG}
+	Qt${QT_VERSION_MAJOR}::Core
+	Qt${QT_VERSION_MAJOR}::Widgets
+)
